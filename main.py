@@ -1,5 +1,5 @@
 def main():
-    print("Witaj w panelu => gier - aplikacji <=")
+    print("=> GAME AND APPS <=")
     print(" ")
     menu()
 
@@ -19,5 +19,8 @@ def menu():
         print(" ")
     elif wybor == 3:
         print(" ")
+
+def paper():
+    print("WELCOME to the game versus BOT PC")
 
 main()
