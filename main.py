@@ -14,13 +14,23 @@ def menu():
     wybor = int(input("POZYCJA Z MENU ======> "))
 
     if wybor == 1:
-        print(" ")
+        paper()
     elif wybor == 2:
-        print(" ")
+        files()
     elif wybor == 3:
-        print(" ")
+        randomes()
 
 def paper():
+    print(" ")
     print("WELCOME to the game versus BOT PC")
+
+def files():
+    print(" ")
+    print("INFORMATION about FILE/CATALOG")
+
+def randomes():
+    print(" ")
+    print("WELCOME to the game guess the number")
+
 
 main()
