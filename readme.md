@@ -4,4 +4,4 @@
 
 *info : file's/file -- catalog's / catalog*
 
-**RANDOM VALUE - GUESS WHAT**
+*random value - guess what*
