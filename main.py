@@ -29,8 +29,9 @@ def paperGame():
     
     rounds = int(input("how manu round do you want to play? => "))
     win = 0
-    x = 0
+    draw = 0
     lose = 0
+    x = 0
 
     while x < rounds:
      wayUser = input("stone/paper/scissors ==> ")
@@ -38,7 +39,8 @@ def paperGame():
      wayPC = print(random.choice(tools))
 
      if wayUser == wayPC:
-         print(f"Both players selected {wayUser}. It's a tie!")
+         print(f"Both players selected {wayUser}")
+         draw += 1
      elif wayUser == "stone":
        if wayPC == "scissors":
          print("Rock smashes scissors! You win!")
@@ -66,6 +68,10 @@ def paperGame():
          print("Rock smashes scissors! You lose.")
          lose += 1
          x += 1
+
+    print("Wins => ",win)
+    print("Draws => ",draw)
+    print("Losses => ",lose)
 
 
 def files():
