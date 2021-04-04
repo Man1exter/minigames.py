@@ -1,4 +1,5 @@
 import random
+from random import randint
 
 def main():
     print("=> GAME AND APPS <=")
@@ -82,5 +83,7 @@ def randomes():
     print(" ")
     print("WELCOME to the game guess the number")
     print(" ")
+
+
 
 main()
