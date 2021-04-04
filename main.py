@@ -25,9 +25,18 @@ def menu():
 def paper():
     print(" ")
     print("WELCOME to the game versus BOT PC")
+    print(" ")
+    
     wayUser = input("stone/paper/scissors ==> ")
     tools = ["stone","paper","scissors"]
     wayPC = print(random.choice(tools))
+
+    if wayPC == "stone" & wayUser == "paper" | wayPC == "paper" & wayUser == "scissors" | wayPC == "scissors" & wayUser == "stone":
+        print(" ====> WYGRALES")
+    elif wayPC == "stone" & wayUser == "stone" | wayPC == "paper" & wayUser == "paper" | wayPC == "scissors" & wayUser == "scissors":
+        print(" ====> REMIS")
+    elif wayPC == "paper" & wayUser == "stone" | wayPC == "scissors" & wayUser == "paper" | wayPC == "stone" & wayUser == "scissors":
+        print(" ====> PRZEGRALES")
 
 def files():
     print(" ")
