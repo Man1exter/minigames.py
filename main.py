@@ -1,3 +1,5 @@
+import random
+
 def main():
     print("=> GAME AND APPS <=")
     print(" ")
@@ -11,7 +13,7 @@ def menu():
     print("[3] RANDOM VALUE - GUESS WHAT")
     print(" ")
 
-    wybor = int(input("POZYCJA Z MENU ======> "))
+    wybor = int(input("POSITION FROM MENU ======> "))
 
     if wybor == 1:
         paper()
@@ -23,6 +25,9 @@ def menu():
 def paper():
     print(" ")
     print("WELCOME to the game versus BOT PC")
+    wayUser = input("stone/paper/scissors ==> ")
+    tools = ["stone","paper","scissors"]
+    wayPC = print(random.choice(tools))
 
 def files():
     print(" ")
