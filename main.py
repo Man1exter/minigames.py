@@ -81,21 +81,21 @@ def files():
 
 def randomes():
       
-     print(" ")
-     print("WELCOME to the game guess the number")
-     print(" ")
+    print(" ")
+    print("WELCOME to the game guess the number")
+    print(" ")
 
-     roll = randint(1,100)
-     answer = -1
-     it = 0
-     print("numbers 1 - 100")
-     while answer != roll:
-          it += 1
-     answer = int(input("guess number: "))
-     if answer > roll:
-          print("an even greater number")
-     elif answer < roll:
-          print("an even smaller number")
-     print("Amazing only => ",it," rounds")
+    roll = randint(1,100)
+    answer = -1
+    it = 0
+    print("numbers 1 - 100")
+    while answer != roll:
+      it += 1
+      answer = int(input("guess number: "))
+      if answer > roll:
+           print("an even greater number")
+      elif answer < roll:
+           print("an even smaller number")
+    print("Amazing only => ",it," rounds")
 
 main()
