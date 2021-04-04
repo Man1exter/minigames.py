@@ -28,6 +28,7 @@ def paperGame():
     print(" ")
     
     rounds = input("how manu round do you want to play? => ")
+    
     wayUser = input("stone/paper/scissors ==> ")
     tools = ["stone","paper","scissors"]
     wayPC = print(random.choice(tools))
