@@ -78,6 +78,7 @@ def paperGame():
 def files():
     print(" ")
     print("INFORMATION about FILE/CATALOG")
+    print(" ")
 
 def randomes():
       
