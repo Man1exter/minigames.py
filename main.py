@@ -27,29 +27,45 @@ def paperGame():
     print("WELCOME to the game versus BOT PC")
     print(" ")
     
-    rounds = input("how manu round do you want to play? => ")
-    
-    wayUser = input("stone/paper/scissors ==> ")
-    tools = ["stone","paper","scissors"]
-    wayPC = print(random.choice(tools))
+    rounds = int(input("how manu round do you want to play? => "))
+    win = 0
+    x = 0
+    lose = 0
 
-    if wayUser == wayPC:
-        print(f"Both players selected {wayUser}. It's a tie!")
-    elif wayUser == "stone":
-      if wayPC == "scissors":
-        print("Rock smashes scissors! You win!")
-      else:
-        print("Paper covers stone! You lose.")
-    elif wayUser == "paper":
-     if wayPC == "stone":
-        print("Paper covers stone! You win!")
+    while x < rounds:
+     wayUser = input("stone/paper/scissors ==> ")
+     tools = ["stone","paper","scissors"]
+     wayPC = print(random.choice(tools))
+
+     if wayUser == wayPC:
+         print(f"Both players selected {wayUser}. It's a tie!")
+     elif wayUser == "stone":
+       if wayPC == "scissors":
+         print("Rock smashes scissors! You win!")
+         win += 1
+         x += 1
+       else:
+         print("Paper covers stone! You lose.")
+         lose += 1
+         x += 1
+     elif wayUser == "paper":
+       if wayPC == "stone":
+         print("Paper covers stone! You win!")
+         win += 1
+         x += 1
+       else:
+         print("Scissors cuts paper! You lose.")
+         lose += 1
+         x += 1
+     elif wayUser == "scissors":
+       if wayPC == "paper":
+         print("Scissors cuts paper! You win!")
+         win += 1
+         x += 1
      else:
-        print("Scissors cuts paper! You lose.")
-    elif wayUser == "scissors":
-     if wayPC == "paper":
-        print("Scissors cuts paper! You win!")
-     else:
-        print("Rock smashes scissors! You lose.")
+         print("Rock smashes scissors! You lose.")
+         lose += 1
+         x += 1
 
 
 def files():
