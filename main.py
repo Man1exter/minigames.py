@@ -92,6 +92,12 @@ def files():
     print("del catalogs ====> os.removedirs() ")
     print(" ")
     print("all date and upgrades in file ==> ",os.stat("main.py"))
+    print(" ")
+    print(" ")
+    print("rename file ==> ",os.rename("from","to"))
+    print("3 more info about localization ==> ",os.walk("directory"))
+    print("open file ==> ",os.startfile("path........"))
+    print(" ")
 
 def randomes():
       
