@@ -85,6 +85,12 @@ def files():
     print("catalog localization => ",os.getcwd())
     print("all files in catalog => ",os.listdir())
     print(" ")
+    print("new catalog ====> os.mkdir() ")
+    print("new catalogs ====> os.makedirs() ")
+    print(" ")
+    print("del catalog ====> os.rmdir() ")
+    print("del catalogs ====> os.removedirs() ")
+    print(" ")
 
 
 def randomes():
