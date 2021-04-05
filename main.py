@@ -76,10 +76,16 @@ def paperGame():
     print("Losses => ",lose)
 
 
+
 def files():
+      
     print(" ")
     print("INFORMATION about FILE/2x/CATALOG/2x")
     print(" ")
+    print("catalog localization => ",os.getcwd())
+    print("all files in catalog => ",os.listdir())
+    print(" ")
+
 
 def randomes():
       
