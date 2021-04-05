@@ -134,9 +134,11 @@ def snake():
 
       start = True
       while start:
-            for ele in pygame.ele.get():
-                  if ele.type == pygame.QUIT:
+            for event in pygame.event.get():
+                  if event.type == pygame.QUIT:
                         start = False
+
+      pygame.quit()
 
 
 main()
