@@ -1,4 +1,5 @@
 import random
+import os
 from random import randint
 
 def main():
@@ -75,9 +76,28 @@ def paperGame():
     print("Losses => ",lose)
 
 
+
 def files():
+      
     print(" ")
-    print("INFORMATION about FILE/CATALOG")
+    print("INFORMATION about FILE/2x/CATALOG/2x")
+    print(" ")
+    print("catalog localization => ",os.getcwd())
+    print("all files in catalog => ",os.listdir())
+    print(" ")
+    print("new catalog ====> os.mkdir() ")
+    print("new catalogs ====> os.makedirs() ")
+    print(" ")
+    print("del catalog ====> os.rmdir() ")
+    print("del catalogs ====> os.removedirs() ")
+    print(" ")
+    print("all date and upgrades in file ==> ",os.stat("main.py"))
+    print(" ")
+    print(" ")
+    print("rename file ==> ",os.rename("from","to"))
+    print("3 more info about localization ==> ",os.walk("directory"))
+    print("open file ==> ",os.startfile("path........"))
+    print(" ")
 
 def randomes():
       
