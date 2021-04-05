@@ -130,7 +130,7 @@ def snake():
       print(" ")
       
       pygame.init()
-      window = pygame.display.set_mode((1200,1000))
+      window = pygame.display.set_mode((1000,900))
 
       start = True
       while start:
