@@ -91,7 +91,7 @@ def files():
     print("del catalog ====> os.rmdir() ")
     print("del catalogs ====> os.removedirs() ")
     print(" ")
-
+    print("all date and upgrades in file ==> ",os.stat("main.py"))
 
 def randomes():
       
