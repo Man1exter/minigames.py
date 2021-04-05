@@ -1,6 +1,7 @@
 import random
 import os
 from random import randint
+import pygame
 
 def main():
     print("=> GAME AND APPS <=")
@@ -123,6 +124,19 @@ def randomes():
 
 
 def snake():
+      
+      print(" ")
       print(" <=> SNAKE GAME <=> ")
+      print(" ")
+      
+      pygame.init()
+      window = pygame.display.set_mode((1200,1000))
+
+      start = True
+      while start:
+            for ele in pygame.ele.get():
+                  if ele.type == pygame.QUIT:
+                        start = False
+
 
 main()
