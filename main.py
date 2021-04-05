@@ -1,4 +1,5 @@
 import random
+import os
 from random import randint
 
 def main():
@@ -77,7 +78,7 @@ def paperGame():
 
 def files():
     print(" ")
-    print("INFORMATION about FILE/CATALOG")
+    print("INFORMATION about FILE/2x/CATALOG/2x")
     print(" ")
 
 def randomes():
