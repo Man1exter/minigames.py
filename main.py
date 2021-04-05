@@ -13,6 +13,7 @@ def menu():
     print("[1] PAPER/STONE/SCISSORS - GAME")
     print("[2] INFO ABOUT FILE/CATALOG / S")
     print("[3] RANDOM VALUE - GUESS WHAT")
+    print("[4] SNAKE GAME IN WINDOW")
     print(" ")
 
     wybor = int(input("POSITION FROM MENU ======> "))
@@ -23,6 +24,8 @@ def menu():
         files()
     elif wybor == 3:
         randomes()
+    elif wybor == 4:
+          snake()
 
 def paperGame():
     print(" ")
@@ -117,5 +120,9 @@ def randomes():
       elif answer < roll:
            print("an even smaller number")
     print("Amazing only => ",it," rounds")
+
+
+def snake():
+      print(" <=> SNAKE GAME <=> ")
 
 main()
