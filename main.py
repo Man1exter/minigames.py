@@ -1,9 +1,10 @@
+#import pygame
 import random
 import os
 from random import randint
-import pygame
 
 def main():
+    print(" ")
     print("=> GAME AND APPS <=")
     print(" ")
     menu()
@@ -17,15 +18,15 @@ def menu():
     print("[4] SNAKE GAME IN WINDOW")
     print(" ")
 
-    wybor = int(input("POSITION FROM MENU ======> "))
+    ex = int(input("POSITION FROM MENU ======> "))
 
-    if wybor == 1:
+    if ex == 1:
         paperGame()
-    elif wybor == 2:
+    elif ex == 2:
         files()
-    elif wybor == 3:
+    elif ex == 3:
         randomes()
-    elif wybor == 4:
+    elif ex == 4:
           snake()
 
 def paperGame():
@@ -129,24 +130,32 @@ def snake():
       print(" <=> SNAKE GAME <=> ")
       print(" ")
       
-      pygame.init()
-      window = pygame.display.set_mode((1000,900))
+      #pygame.init()
+      #window = pygame.display.set_mode((800,600))
 
-      osx = 0
-      osy = 0
-      player = pygame.rect.Rect(osx,osy,100,100)
+      #osx = 50
+      #osy = 50
+      #player = pygame.rect.Rect(osx,osy,100,100)
 
-      start = True
-      while start:
-            for event in pygame.event.get():
-                  if event.type == pygame.QUIT:
-                        start = False
+      #start = True
+      #while start:
+            #pygame.time.Clock().tick(60)
+            #for event in pygame.event.get():
+                  #if event.type == pygame.QUIT:
+                        #start = False
 
-      window.fill((7, 219, 242))
-      pygame.draw.rect(window,(20,200,20),player)
-      pygame.display.update()
+      #keys = pygame.key.get_pressed()
 
-      pygame.quit()
+      #if keys[pygame.K_RIGHT]:
+            #osx += 1
+      #if keys[pygame.K_LEFT]:
+            #osx -= 1
+      #if keys[pygame.K_UP]:
+            #osy += 1
+      #if keys[pygame.K_DOWN]:
+            #osy -= 1
 
-
+      #window.fill((255, 242, 0))
+      #pygame.draw.rect(window,(50,100,50),player)
+      #pygame.display.update()
 main()
