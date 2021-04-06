@@ -1,14 +1,15 @@
 import pygame
 
-pygame.init()
-window = pygame.display.set_mode((800, 600))
+def start():
+ pygame.init()
+ window = pygame.display.set_mode((800, 600))
 
-x = 70
-y = 50
-player = pygame.rect.Rect(x, y, 100, 100)  # tworzy prostokąt
+ x = 70
+ y = 50
+ player = pygame.rect.Rect(x, y, 100, 100)  # tworzy prostokąt
 
-run = True
-while run:
+ run = True
+ while run:
     pygame.time.Clock().tick(60)  # maksymalnie 60 fps
     for event in pygame.event.get():
         if event.type == pygame.QUIT:  # jeśli gracz zamknie okienko
