@@ -130,32 +130,37 @@ def snake():
       print(" <=> SNAKE GAME <=> ")
       print(" ")
       
-      pygame.init()
-      window = pygame.display.set_mode((800,600))
+      import pygame
 
-      osx = 50
-      osy = 50
-      player = pygame.rect.Rect(osx,osy,100,100)
+pygame.init()
+window = pygame.display.set_mode((800, 600))
 
-      start = True
-      while start:
-            pygame.time.Clock().tick(60)
-            for event in pygame.event.get():
-                  if event.type == pygame.QUIT:
-                        start = False
+x = 70
+y = 50
+player = pygame.rect.Rect(x, y, 100, 100)  # tworzy prostokąt
 
-      keys = pygame.key.get_pressed()
+run = True
+while run:
+    pygame.time.Clock().tick(60)  # maksymalnie 60 fps
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:  # jeśli gracz zamknie okienko
+            run = False
 
-      if keys[pygame.K_RIGHT]:
-            osx += 1
-      if keys[pygame.K_LEFT]:
-            osx -= 1
-      if keys[pygame.K_UP]:
-            osy += 1
-      if keys[pygame.K_DOWN]:
-            osy -= 1
+    keys = pygame.key.get_pressed()
 
-      window.fill((255, 242, 0))
-      pygame.draw.rect(window,(50,100,50),player)
-      pygame.display.update()
+    speed = 5
+    if keys[pygame.K_RIGHT]:  # czy strzałka w prawo jest naciskana
+        x += speed
+    if keys[pygame.K_LEFT]:  # strzałka w lewo
+        x -= speed
+    if keys[pygame.K_UP]:  # strzałka w górę
+        y -= speed
+    if keys[pygame.K_DOWN]:  # strzałka w dół
+        y += speed
+
+    player = pygame.rect.Rect(x, y, 100, 100)
+
+    window.fill((24, 164, 240))  # rysowanie tła
+    pygame.draw.rect(window, (20, 200, 20), player)  # rysowanie gracza
+    pygame.display.update()
 main()
