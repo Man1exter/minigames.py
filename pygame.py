@@ -30,5 +30,4 @@ def snaker():
     window.fill((255, 242, 0))
     pygame.draw.rect(window,(50,100,50),player)
     pygame.display.update()
-
 snaker()
