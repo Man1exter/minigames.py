@@ -138,6 +138,9 @@ def snake():
                   if event.type == pygame.QUIT:
                         start = False
 
+      window.fill((7, 219, 242))
+      pygame.display.update()
+
       pygame.quit()
 
 
