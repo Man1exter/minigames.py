@@ -132,6 +132,10 @@ def snake():
       pygame.init()
       window = pygame.display.set_mode((1000,900))
 
+      osx = 0
+      osy = 0
+      player = pygame.rect.Rect(osx,osy,100,100)
+
       start = True
       while start:
             for event in pygame.event.get():
@@ -139,6 +143,7 @@ def snake():
                         start = False
 
       window.fill((7, 219, 242))
+      pygame.draw.rect(window,(20,200,20),player)
       pygame.display.update()
 
       pygame.quit()
