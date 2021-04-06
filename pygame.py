@@ -1,7 +1,7 @@
 import pygame
 
-def snake():
-    
+def snaker():
+
     pygame.init()
     window = pygame.display.set_mode((800,600))
 
@@ -31,4 +31,4 @@ def snake():
     pygame.draw.rect(window,(50,100,50),player)
     pygame.display.update()
 
-snake()
+snaker()
