@@ -9,8 +9,8 @@ class Player:
         self.x_cord = 0  
         self.y_cord = 0  
         self.image = pygame.image.load("./jppp/rulon223223.png")  
-        self.width = self.image.get_width()  
-        self.height = self.image.get_height()  
+        self.width = 50 
+        self.height = 50
         self.speed = 4  
         self.hitbox = pygame.Rect(self.x_cord, self.y_cord, self.width, self.height)
 
@@ -34,9 +34,9 @@ class Cash:
     def __init__(self):
         self.x_cord = randint(0, 1280)
         self.y_cord = randint(0, 720)
-        self.image = pygame.image.load("banknot.png")
-        self.width = self.image.get_width()  
-        self.height = self.image.get_height()  
+        self.image = pygame.image.load("./jppp/harnas-butelka-promo.png")
+        self.width = 25  
+        self.height = 25
         self.hitbox = pygame.Rect(self.x_cord, self.y_cord, self.width, self.height)
 
     def tick(self):
@@ -50,7 +50,7 @@ def start():
     player = Player()
     clock = 0
     score = 0
-    banknotes = []
+    beers = []
     background = pygame.image.load("./jppp/ruloniktilt1.png")
     while run:
         clock += pygame.time.Clock().tick(60) / 1000  
@@ -60,20 +60,20 @@ def start():
         keys = pygame.key.get_pressed()
         if clock >= 2:
             clock = 0
-            banknotes.append(Cash())
+            beers.append(Cash())
 
         player.tick(keys)
-        for banknote in banknotes:
+        for banknote in beers:
             banknote.tick()
 
-        for banknote in banknotes:
+        for banknote in beers:
             if player.hitbox.colliderect(banknote.hitbox):
-                banknotes.remove(banknote)
+                beers.remove(banknote)
                 score += 1
 
         window.blit(background, (0, 0))  
         player.draw()
-        for banknote in banknotes:
+        for banknote in beers:
             banknote.draw()
         pygame.display.update()
 
