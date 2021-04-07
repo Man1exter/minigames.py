@@ -33,6 +33,5 @@ def start():
     pygame.draw.rect(window, (20, 200, 20), player)  # rysowanie gracza
     pygame.display.update()
 
-
 if __name__ == "__main__":
     start()
