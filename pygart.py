@@ -2,7 +2,7 @@ import pygame
 
 def start():
  pygame.init()
- window = pygame.display.set_mode((800, 600))
+ window = pygame.display.set_mode((1024, 760)) # 1024×760 4:3
 
  osx = 70
  osy = 50
