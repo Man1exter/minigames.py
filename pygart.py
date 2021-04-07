@@ -2,7 +2,7 @@ import pygame
 from random import randint
 
 pygame.init()
-window = pygame.display.set_mode((1024, 760)) # 1024 × 760 4:3
+window = pygame.display.set_mode((1600, 1024)) # 1024 × 760 4:3
 
 class Player:
     def __init__(self):
@@ -15,20 +15,19 @@ class Player:
         self.hitbox = pygame.Rect(self.x_cord, self.y_cord, self.width, self.height)
 
     def tick(self, keys): 
-        if keys[pygame.K_w]:
+        if keys[pygame.K_RIGHT]:
             self.y_cord -= self.speed
-        if keys[pygame.K_a]:
+        if keys[pygame.K_LEFT]:
             self.x_cord -= self.speed
-        if keys[pygame.K_s]:
+        if keys[pygame.K_UP]:
             self.y_cord += self.speed
-        if keys[pygame.K_d]:
+        if keys[pygame.K_DOWN]:
             self.x_cord += self.speed
 
         self.hitbox = pygame.Rect(self.x_cord, self.y_cord, self.width, self.height)
 
     def draw(self):
         window.blit(self.image, (self.x_cord, self.y_cord))
-
 
 class Cash:
     def __init__(self):
