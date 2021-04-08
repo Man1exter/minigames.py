@@ -126,7 +126,6 @@ def randomes():
 
 
 def snake():
-      
     print(" ")
     print(" <=> SNAKE GAME <=> ")
     print(" ")
