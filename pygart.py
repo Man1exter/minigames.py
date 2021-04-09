@@ -2,7 +2,7 @@ import pygame
 from random import randint
 
 pygame.init()
-window = pygame.display.set_mode((1024, 760)) # 1024 × 760 4:3
+window = pygame.display.set_mode((1366, 768)) # 1366×768 (16:9)
 
 class Player:
     def __init__(self):
