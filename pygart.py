@@ -3,14 +3,13 @@ from random import randint
 
 pygame.init()
 window = pygame.display.set_mode((1366, 768)) # 1366×768 (16:9)
-
 class Player:
     def __init__(self):
         self.osx = 0  
         self.osy = 0  
         self.image = pygame.image.load("./jppp/rulon223223.png")  
-        self.width = 0 
-        self.height = 0
+        self.width = self.image.get_width()
+        self.height = self.image.get_height()
         self.speed = 10  
         self.hitbox = pygame.Rect(self.osx, self.osy, self.width, self.height)
 
@@ -23,19 +22,17 @@ class Player:
             self.osy += self.speed
         if keys[pygame.K_RIGHT]:
             self.osx += self.speed
-
         self.hitbox = pygame.Rect(self.osx, self.osy, self.width, self.height)
 
     def draw(self):
         window.blit(self.image, (self.osx, self.osy))
-
-class Cash:
+class Achievement:
     def __init__(self):
         self.osx = randint(0, 1280)
         self.osy = randint(0, 720)
         self.image = pygame.image.load("./jppp/harnas-butelka-promo.png")
-        self.width = 0  
-        self.height = 0
+        self.width = self.image.get_width()
+        self.height = self.image.get_height()
         self.hitbox = pygame.Rect(self.osx, self.osy, self.width, self.height)
 
     def tick(self):
@@ -59,7 +56,7 @@ def start():
         keys = pygame.key.get_pressed()
         if clock >= 2:
             clock = 0
-            beers.append(Cash())
+            beers.append(Achievement())
 
         player.tick(keys)
         for banknote in beers:
