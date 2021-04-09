@@ -8,9 +8,9 @@ class Player:
     def __init__(self):
         self.osx = 0  
         self.osy = 0  
-        self.image = pygame.image.load("./jppp/kulonikmapa.png")  
-        self.width = 50 
-        self.height = 50
+        self.image = pygame.image.load("./jppp/rulon223223.png")  
+        self.width = 0 
+        self.height = 0
         self.speed = 10  
         self.hitbox = pygame.Rect(self.osx, self.osy, self.width, self.height)
 
@@ -34,8 +34,8 @@ class Cash:
         self.osx = randint(0, 1280)
         self.osy = randint(0, 720)
         self.image = pygame.image.load("./jppp/harnas-butelka-promo.png")
-        self.width = 25  
-        self.height = 25
+        self.width = 0  
+        self.height = 0
         self.hitbox = pygame.Rect(self.osx, self.osy, self.width, self.height)
 
     def tick(self):
@@ -50,7 +50,7 @@ def start():
     clock = 0
     score = 0
     beers = []
-    background = pygame.image.load("./jppp/ruloniktilt1.png")
+    background = pygame.image.load("./jppp/kulonikmapa.png")
     while run:
         clock += pygame.time.Clock().tick(60) / 1000  
         for event in pygame.event.get():
@@ -72,6 +72,7 @@ def start():
 
         window.blit(background, (0, 0))  
         player.draw()
+
         for banknote in beers:
             banknote.draw()
         pygame.display.update()
