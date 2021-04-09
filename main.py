@@ -84,7 +84,6 @@ def paperGame():
 
 
 def files():
-      
     print(" ")
     print("INFORMATION about FILE/2x/CATALOG/2x")
     print(" ")
@@ -106,7 +105,6 @@ def files():
     print(" ")
 
 def randomes():
-      
     print(" ")
     print("WELCOME to the game guess the number")
     print(" ")
@@ -123,7 +121,6 @@ def randomes():
       elif answer < roll:
            print("an even smaller number")
     print("Amazing only => ",it," rounds")
-
 
 def snake():
     print(" ")
