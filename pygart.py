@@ -8,10 +8,10 @@ class Player:
     def __init__(self):
         self.osx = 0  
         self.osy = 0  
-        self.image = pygame.image.load("./jppp/rulon223223.png")  
+        self.image = pygame.image.load("./jppp/kulonikmapa.png")  
         self.width = 50 
         self.height = 50
-        self.speed = 4  
+        self.speed = 10  
         self.hitbox = pygame.Rect(self.osx, self.osy, self.width, self.height)
 
     def tick(self, keys): 
