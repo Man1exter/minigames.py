@@ -2,15 +2,14 @@ import pygame
 from random import randint
 
 pygame.init()
-window = pygame.display.set_mode((1024, 760)) # 1024 × 760 4:3
-
+window = pygame.display.set_mode((1366, 768)) # 1366×768 (16:9)
 class Player:
     def __init__(self):
         self.osx = 0  
         self.osy = 0  
         self.image = pygame.image.load("./jppp/rulon223223.png")  
-        self.width = 50 
-        self.height = 50
+        self.width = 0
+        self.height = 0
         self.speed = 4  
         self.hitbox = pygame.Rect(self.osx, self.osy, self.width, self.height)
 
@@ -34,8 +33,8 @@ class Cash:
         self.osx = randint(0, 1280)
         self.osy = randint(0, 720)
         self.image = pygame.image.load("./jppp/harnas-butelka-promo.png")
-        self.width = 25  
-        self.height = 25
+        self.width = 0
+        self.height = 0
         self.hitbox = pygame.Rect(self.osx, self.osy, self.width, self.height)
 
     def tick(self):
